@@ -1,4 +1,4 @@
-# Data files, until go to release data
+# Data files, until ok to release data
 data/
 vortexclust/__pycache__
 vortexclust/analysis/__pycache__
@@ -9,6 +9,10 @@ vortexclust/visualization/__pycache__
 vortexclust/workflows/__pycache__
 
 output/*
+
+packages_vortexclust.dot
+packages_vortexclust_colored.dot
+pkg_deps.py
 
 # Default ignored files
 /shelf/
