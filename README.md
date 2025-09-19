@@ -78,6 +78,10 @@ Typical workflow:
 
 See `notebooks/` for reproducible examples replicating published studies.
 
+### Command-line demo
+Minimal: `vortexclust-demo --input data/demo_d.csv --clusters 3`
+
+Extended (requires extra demo dependencies): `vortexclust-demo-ext`
 ## Tests
 Run the test suite with:
 ```bash

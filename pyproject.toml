@@ -18,7 +18,7 @@ maps = ["cartopy>=0.24,<0.26"] # compability with Python 3.13
 demo = [
     "seaborn>=0.12,<1.0",
     "pyts",
-    "statsmodels"
+    "statsmodels>=0.13"
 ]
 
 [pytest]
@@ -44,8 +44,9 @@ Homepage = "https://github.com/hGl0/vortexclust"
 Issues = "https://github.com/hGl0/vortexclust/issues"
 
 # optional CLI
-#[project.scripts]
-#vortexclust = "vortexclust.workflows.demo:main"
+[project.scripts]
+vortexclust-demo = "vortexclust.workflows.minimal_script:main"
+vortexclust-demo-ext = "vortexclust.workflows.extended_demo_script:main"
 
 [tool.hatch.build]
 include = ["vortexclust/**"]

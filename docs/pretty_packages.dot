@@ -1,0 +1,166 @@
+digraph "packages" {
+rankdir=TB
+charset="utf-8"
+"vortexclust" [color="black", label=<vortexclust>, shape="box", style="solid"];
+"vortexclust.analysis" [color="black",  shape="box", style="solid", label="analysis"];
+"vortexclust.analysis.aggregator" [color="black",  shape="box", style="solid", label="aggregator"];
+"vortexclust.analysis.clustering" [color="black",  shape="box", style="solid", label="clustering"];
+"vortexclust.analysis.decomposition" [color="black",  shape="box", style="solid", label="decomposition"];
+"vortexclust.analysis.geometry" [color="black",  shape="box", style="solid", label="geometry"];
+"vortexclust.analysis.metrics" [color="black",  shape="box", style="solid", label="metrics"];
+"vortexclust.analysis.sampling" [color="black",  shape="box", style="solid", label="sampling"];
+"vortexclust.core" [color="black",  shape="box", style="solid", label="core"];
+"vortexclust.core.constants" [color="black",  shape="box", style="solid", label="constants"];
+"vortexclust.core.utils" [color="black",  shape="box", style="solid", label="utils"];
+"vortexclust.io" [color="black",  shape="box", style="solid", label="io"];
+"vortexclust.io.cleaner" [color="black",  shape="box", style="solid", label="cleaner"];
+"vortexclust.io.loader" [color="black",  shape="box", style="solid", label="loader"];
+"vortexclust.io.paths" [color="black",  shape="box", style="solid", label="paths"];
+"vortexclust.models" [color="black",  shape="box", style="solid", label="models"];
+"vortexclust.models.validation" [color="black",  shape="box", style="solid", label="validation"];
+"vortexclust.visualization" [color="black",  shape="box", style="solid", label="visualization"];
+"vortexclust.visualization.correlation" [color="black",  shape="box", style="solid", label="correlation"];
+"vortexclust.visualization.dendrogram" [color="black",  shape="box", style="solid", label="dendrogram"];
+"vortexclust.visualization.map" [color="black",  shape="box", style="solid", label="map"];
+"vortexclust.visualization.pca" [color="black",  shape="box", style="solid", label="pca"];
+"vortexclust.visualization.radar" [color="black",  shape="box", style="solid", label="radar"];
+"vortexclust.visualization.utils" [color="black",  shape="box", style="solid", label="utils"];
+"vortexclust.visualization.violin" [color="black",  shape="box", style="solid", label="violin"];
+"vortexclust.workflows" [color="black",  shape="box", style="solid", label="workflows"];
+"vortexclust.workflows.config" [color="black",  shape="box", style="solid", label="config"];
+"vortexclust.workflows.demo" [color="black",  shape="box", style="solid", label="demo"];
+"vortexclust.workflows.extended_demo_script" [color="black",  shape="box", style="solid", label="extended_demo_script"];
+"vortexclust.workflows.minimal_demo_script" [color="black",  shape="box", style="solid", label="minimal_demo_script"];
+"vortexclust" -> "vortexclust.analysis" [arrowhead="open", arrowtail="none"];
+"vortexclust" -> "vortexclust.core.constants" [arrowhead="open", arrowtail="none"];
+"vortexclust.analysis" -> "vortexclust.analysis.clustering" [arrowhead="open", arrowtail="none"];
+"vortexclust.analysis" -> "vortexclust.analysis.decomposition" [arrowhead="open", arrowtail="none"];
+"vortexclust.analysis" -> "vortexclust.analysis.metrics" [arrowhead="open", arrowtail="none"];
+"vortexclust.analysis.clustering" -> "vortexclust.analysis.metrics" [arrowhead="open", arrowtail="none"];
+"vortexclust.analysis.clustering" -> "vortexclust.analysis.sampling" [arrowhead="open", arrowtail="none"];
+"vortexclust.analysis.clustering" -> "vortexclust.core.utils" [arrowhead="open", arrowtail="none"];
+"vortexclust.analysis.clustering" -> "vortexclust.models.validation" [arrowhead="open", arrowtail="none"];
+"vortexclust.analysis.decomposition" -> "vortexclust.io.paths" [arrowhead="open", arrowtail="none"];
+"vortexclust.io" -> "vortexclust.io.cleaner" [arrowhead="open", arrowtail="none"];
+"vortexclust.io" -> "vortexclust.io.loader" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization" -> "vortexclust.visualization.correlation" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization" -> "vortexclust.visualization.dendrogram" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization" -> "vortexclust.visualization.pca" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization" -> "vortexclust.visualization.radar" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization" -> "vortexclust.visualization.violin" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.correlation" -> "vortexclust.io.paths" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.dendrogram" -> "vortexclust.io.paths" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.map" -> "vortexclust.analysis.aggregator" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.map" -> "vortexclust.analysis.geometry" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.map" -> "vortexclust.core.utils" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.map" -> "vortexclust.io.paths" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.pca" -> "vortexclust.io.paths" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.radar" -> "vortexclust.analysis.aggregator" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.radar" -> "vortexclust.io.paths" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.radar" -> "vortexclust.visualization.utils" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.utils" -> "vortexclust.analysis.decomposition" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.violin" -> "vortexclust.io.paths" [arrowhead="open", arrowtail="none"];
+"vortexclust.visualization.violin" -> "vortexclust.visualization.utils" [arrowhead="open", arrowtail="none"];
+"vortexclust.workflows.demo" -> "vortexclust.io.paths" [arrowhead="open", arrowtail="none"];
+"vortexclust.workflows.extended_demo_script" -> "vortexclust.analysis.clustering" [arrowhead="open", arrowtail="none"];
+"vortexclust.workflows.extended_demo_script" -> "vortexclust.analysis.decomposition" [arrowhead="open", arrowtail="none"];
+"vortexclust.workflows.extended_demo_script" -> "vortexclust.io" [arrowhead="open", arrowtail="none"];
+"vortexclust.workflows.extended_demo_script" -> "vortexclust.visualization" [arrowhead="open", arrowtail="none"];
+"vortexclust.workflows.extended_demo_script" -> "vortexclust.workflows" [arrowhead="open", arrowtail="none"];
+"vortexclust.workflows.extended_demo_script" -> "vortexclust.workflows.config" [arrowhead="open", arrowtail="none"];
+"vortexclust.workflows.extended_demo_script" -> "vortexclust.workflows.demo" [arrowhead="open", arrowtail="none"];
+"vortexclust.workflows.minimal_demo_script" -> "vortexclust.io" [arrowhead="open", arrowtail="none"];
+"vortexclust.workflows.minimal_demo_script" -> "vortexclust.visualization.dendrogram" [arrowhead="open", arrowtail="none"];
+
+// === submodule clusters ===
+subgraph cluster_analysis {
+  label="analysis";
+  labelloc=b; labeljust=c;
+  style="filled";
+  color="#345995";
+  fillcolor="#E6EEF9";
+  graph [nodesep=0.10, ranksep=0.1, margin="0.1,0.1"];
+  node  [style=filled, fillcolor="#E6EEF9"];
+  "vortexclust.analysis";
+  "vortexclust.analysis.aggregator";
+  "vortexclust.analysis.clustering";
+  "vortexclust.analysis.decomposition";
+  "vortexclust.analysis.geometry";
+  "vortexclust.analysis.metrics";
+  "vortexclust.analysis.sampling";
+}
+subgraph cluster_core {
+  label="core";
+  labelloc=b; labeljust=c;
+  style="filled";
+  color="#364F6B";
+  fillcolor="#EEF0F7";
+  graph [nodesep=0.10, ranksep=0.1, margin="0.1,0.1"];
+  node  [style=filled, fillcolor="#EEF0F7"];
+  "vortexclust.core";
+  "vortexclust.core.constants";
+  "vortexclust.core.utils";
+}
+subgraph cluster_io {
+  label="io";
+  labelloc=b; labeljust=c;
+  style="filled";
+  color="#7E5EB8";
+  fillcolor="#F3E8FF";
+  graph [nodesep=0.10, ranksep=0.1, margin="0.1,0.1"];
+  node  [style=filled, fillcolor="#F3E8FF"];
+  "vortexclust.io";
+  "vortexclust.io.cleaner";
+  "vortexclust.io.loader";
+  "vortexclust.io.paths";
+}
+subgraph cluster_models {
+  label="models";
+  labelloc=b; labeljust=c;
+  style="filled";
+  color="#B23A48";
+  fillcolor="#FFF0F2";
+  graph [nodesep=0.10, ranksep=0.1, margin="0.1,0.1"];
+  node  [style=filled, fillcolor="#FFF0F2"];
+  "vortexclust.models";
+  "vortexclust.models.validation";
+}
+subgraph cluster_workflows {
+  label="workflows";
+  labelloc=b; labeljust=c;
+  style="filled";
+  color="#C07C2E";
+  fillcolor="#FFF6EA";
+  graph [nodesep=0.10, ranksep=0.1, margin="0.1,0.1"];
+  node  [style=filled, fillcolor="#FFF6EA"];
+  "vortexclust.workflows";
+  "vortexclust.workflows.config";
+  "vortexclust.workflows.demo";
+  "vortexclust.workflows.extended_demo_script";
+  "vortexclust.workflows.minimal_demo_script";
+}
+subgraph cluster_visualization {
+  label="visualization";
+  labelloc=t; labeljust=c;
+  style="filled";
+  color="#2E7D32";
+  fillcolor="#E9F5EC";
+  graph [nodesep=0.10, ranksep=0.1, margin="0.1,0.1"];
+  node  [style=filled, fillcolor="#E9F5EC"];
+  "vortexclust.visualization";
+  "vortexclust.visualization.correlation";
+  "vortexclust.visualization.dendrogram";
+  "vortexclust.visualization.map";
+  "vortexclust.visualization.pca";
+  "vortexclust.visualization.radar";
+  "vortexclust.visualization.utils";
+  "vortexclust.visualization.violin";
+}
+
+  graph [splines=ortho, concentrate=true, compound=true, ranksep=0.5];
+  "vortexclust" -> "vortexclust.visualization"[ style=invis, weight=10];
+  "vortexclust" -> "vortexclust.workflows.extended_demo_script"[ style=invis, weight=10];
+  "vortexclust.visualization.utils" -> "vortexclust.analysis.aggregator"[ style=invis, weight=10];
+  "vortexclust.workflows" -> "vortexclust.analysis"[ style=invis, weight=10];
+  "vortexclust.analysis.sampling" -> "vortexclust.models.validation"[ style=invis, weight=10];
+}
