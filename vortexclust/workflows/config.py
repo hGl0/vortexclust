@@ -2,7 +2,8 @@ from pathlib import Path
 import os
 
 # === Project Root === #
-ROOT_DIR = r"/home/hanna/Dokumente/Uni/Master/Masterarbeit/code"#Path(__file__).resolve().parent.parent
+# ROOT_DIR = Path(__file__).resolve().parent.parent
+ROOT_DIR = Path.cwd()
 
 # === Directory Paths === #
 DATA_DIR = os.path.join(ROOT_DIR, "data")
@@ -14,10 +15,6 @@ RAW_DATA_DIR = os.path.join(DATA_DIR, "raw") # reserved for later use with netCD
 PROCESSED_DATA_DIR = os.path.join(DATA_DIR, "processed") # reserved for later use with processed netCDF files
 FIGURES_DIR = os.path.join(OUTPUT_DIR, "figures")
 ANIMATIONS_DIR = os.path.join(OUTPUT_DIR, "animations")
-
-# Ensure folders exist (optional)
-for d in [OUTPUT_DIR, FIGURES_DIR, ANIMATIONS_DIR]:
-    d.mkdir(parents=True, exist_ok=True)
 
 # === Global Constants === #
 DEFAULT_TIMEZONE = "UTC"
