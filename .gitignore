@@ -8,7 +8,8 @@ vortexclust/models/__pycache__
 vortexclust/visualization/__pycache__
 vortexclust/workflows/__pycache__
 
-output/*
+output/
+output_gui/*
 
 packages_vortexclust.dot
 packages_vortexclust_colored.dot

@@ -45,7 +45,7 @@ Issues = "https://github.com/hGl0/vortexclust/issues"
 
 # optional CLI
 [project.scripts]
-vortexclust-demo = "vortexclust.workflows.minimal_script:main"
+vortexclust-demo = "vortexclust.workflows.minimal_demo_script:main"
 vortexclust-demo-ext = "vortexclust.workflows.extended_demo_script:main"
 
 [tool.hatch.build]
