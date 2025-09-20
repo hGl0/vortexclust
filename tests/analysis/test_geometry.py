@@ -32,11 +32,15 @@ def test_compute_ellipse():
     assert not np.allclose(y[0], y[-1])
 
 
-@pytest.mark.parametrize("area, ar, expected_exception", [
-    (-100, 2.0, ValueError),
-    (1000, -1.0, ValueError),
-    ("not_a_number", 2.0, TypeError),
+@pytest.mark.parametrize("area, ar, theta, loncent, latcent, expected_exception", [
+    (-100, 2.0, 0.0, 0.0, 85, ValueError), # invalid area
+    (1000, -1.0, 0.0, 0.0, 85, ValueError), # invalid ar
+    ("not_a_number", 2.0, 0.0, 0.0, 85, TypeError),
+    (1000, 2.0, 0.0, 181, 85, ValueError), # invalid loncent
+    (1000, 2.0, 0.0, -181, 85, ValueError),
+    (1000, 2.0, 0.0, 0.0, 91, ValueError)
 ])
-def test_compute_ellipse_invalid(area, ar, expected_exception):
+def test_compute_ellipse_invalid(area, ar, theta, loncent, latcent, expected_exception):
     with pytest.raises(expected_exception):
-        compute_ellipse(area, ar, 0.0, 0.0, 85.0)
+        compute_ellipse(area, ar, theta, loncent, latcent)
+

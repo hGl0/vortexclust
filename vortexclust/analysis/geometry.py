@@ -41,7 +41,7 @@ def compute_ellipse(area: float, ar: float, theta: float, loncent: float, latcen
 
     if num_points <= 0:
         raise ValueError("Number of points must be a positive number.")
-    if (loncent < -180) or (latcent > 180):
+    if (loncent < -180) or (loncent > 180):
         raise ValueError("Centroid longitude must be between -180 and 180.")
     if (latcent < -90) or (latcent > 90):
         raise ValueError("Centroid latitude must be between -90 and 90.")
