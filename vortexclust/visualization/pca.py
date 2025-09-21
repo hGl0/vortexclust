@@ -68,6 +68,7 @@ def plot_pca(pca: Any, x_reduced: np.ndarray,
     :param kwargs:
                 - plot_type (str, optional): '2D' or '3D' plot. Default is '2D'
                 - n_arrows (int, optional): Number of principal component vectors to display. Default is 4.
+                - savefig (str, optional): File path to save the plot. Default is None.
 
     :raises AttributeError: If `pca` is missing required attributes.
     :raises TypeError: If input types are incorrect.
